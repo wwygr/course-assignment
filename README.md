@@ -152,8 +152,10 @@ stdout,，和 stderr）进行，但也存在系统特定的接口。**
 ![图4.2](https://github.com/wwygr/tri-fanc/blob/main/picture/pic7.png) ![图4.3](https://github.com/wwygr/tri-fanc/blob/main/picture/pic8.png) 
 ## 4.2三角函数接口及数据类型
 &emsp;&emsp;**sin、cos、tan、arcsin、arccos、arctan六个函数分别放进六个子函数中，通过子函数的方式调用。返
-回值保留到小数点后第12位，函数名如下：mysin,mycosm,mytan,myasin,myacos,myatan。函数名格式如下所示：**  
-&emsp;&emsp;&emsp;&emsp;Function 三角函数名(input,mode)  
+回值保留到小数点后第12位，函数名如下：mysin,mycosm,mytan,myasin,myacos,myatan。函数名格式如下所示：**    
+  
+&emsp;&emsp;&emsp;&emsp;Function 三角函数名(input,mode)   
+  
 &emsp;&emsp;**其中input为输入数据，数据结构为long类型，mode为角度值和弧度制，数据结构为bool型，‘0’表示角
 度制，‘1’表示弧度制。**  
 &emsp;&emsp;**为了不引起歧义，三角函数与MATLAB标准函数库三角函数不同名。 程序中还包含一些异常判断，比如arcsi
