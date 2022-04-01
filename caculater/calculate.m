@@ -133,7 +133,15 @@ if boolErrorInput
 end
 boolMode = get(handles.rad,'value');
 strText2Out = myasin(strText2Out,boolMode);%计算反正弦值，参数2为boolMode型变量，0表示角度1表示弧度
-set(handles.text2,'string',num2str(strText2Out,12));%输出
+if boolMode == 1 %换算成Π显示
+    strText2Out = strText2Out/pi;
+    strText2Out = num2str(strText2Out,12);
+    strText2Out = strcat(strText2Out,'π');
+else
+    strText2Out = num2str(strText2Out,12);
+    strText2Out = strcat(strText2Out,'°');
+end
+set(handles.text2,'string',strText2Out);%输出
 % hObject    handle to asin (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
@@ -148,7 +156,15 @@ if boolErrorInput
 end
 boolMode = get(handles.rad,'value');
 strText2Out = myacos(strText2Out,boolMode);%计算反余弦函数值，参数2为boolMode型变量，0表示角度1表示弧度
-set(handles.text2,'string',num2str(strText2Out,12));%输出
+if boolMode == 1 %换算成Π显示
+    strText2Out = strText2Out/pi;
+    strText2Out = num2str(strText2Out,12);
+    strText2Out = strcat(strText2Out,'π');
+else
+    strText2Out = num2str(strText2Out,12);
+    strText2Out = strcat(strText2Out,'°');
+end
+set(handles.text2,'string',strText2Out);%输出
 % hObject    handle to acos (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
@@ -163,6 +179,15 @@ if boolErrorInput
 end
 boolMode = get(handles.rad,'value');
 strText2Out = myatan(strText2Out,boolMode);%计算反正切函数值，参数2为boolMode型变量，0表示角度1表示弧度
+if boolMode == 1 %换算成Π显示
+    strText2Out = strText2Out/pi;
+    strText2Out = num2str(strText2Out,12);
+    strText2Out = strcat(strText2Out,'π');
+else
+    strText2Out = num2str(strText2Out,12);
+    strText2Out = strcat(strText2Out,'°');
+end
+set(handles.text2,'string',strText2Out);%输出
 set(handles.text2,'string',num2str(strText2Out,12));%输出
 % hObject    handle to atan (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
